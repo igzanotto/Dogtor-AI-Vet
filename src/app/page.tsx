@@ -16,8 +16,8 @@ export default function Chat() {
           <Image
             src="/dog_doctor_logo.png"
             alt="Dog Doctor"
-            width={500} 
-            height={500}
+            width={20} 
+            height={20}
           />
         </div>
         <div className="" style={{ width: '500px' }}>
