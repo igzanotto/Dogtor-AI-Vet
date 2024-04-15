@@ -14,10 +14,10 @@ export default function Chat() {
       <section className="flex justify-center items-center h-screen bg-red">
         <div className="w-1/2">
           <Image
-            src="/dog_doctor_logo.png"
+            src="/dog_doctor_logos.png"
             alt="Dog Doctor"
-            width={20} 
-            height={20}
+            width={500} 
+            height={500}
           />
         </div>
         <div className="" style={{ width: '500px' }}>
