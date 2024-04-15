@@ -8,7 +8,16 @@ export default function Chat() {
   console.log(messages);
 
   return (
-    <section className="flex justify-center items-center h-screen">
+    <section>
+       
+    
+    <section className="flex justify-center items-center h-screen bg-red">
+    <img
+        src="dog_doctor_logo.png"
+        alt="Dog Doctor"
+        className="w-50 h-50"
+      />
+
       <form onSubmit={handleSubmit} className="max-w-xl w-full">
         <div className="text-white max-h-96 h-full overflow-y-auto">
           {messages.map((m) => (
@@ -33,25 +42,29 @@ export default function Chat() {
         </div>
 
         <div className="flex justify-between my-4">
-          <label className="text-white block font-bold my-2">
-            Say something...
+          <label className="block font-bold my-2">
+            Cuentanos sobre tu peludito
           </label>
-          <button
-            className="bg-blue-600 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 disabled:opacity-50"
-            disabled={isLoading || !input}
-          >
-            Send
-          </button>
+          
         </div>
         <textarea
           rows={4}
           value={input}
           onChange={handleInputChange}
-          className="text-black bg-slate-300 px-3 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-          placeholder="Type something..."
+          className="text-black bg-rose-100 px-3 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-rose-600"
+          placeholder="Kiara es una labrador de 12 años bastante activa..."
           autoFocus
         />
+        <div className="flex justify-end my-4">
+        <button
+            className="bg-rose-600 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 disabled:opacity-50"
+            disabled={isLoading || !input}
+          >
+            Enviar
+          </button>
+        </div>
       </form>
+    </section>
     </section>
   );
 }
