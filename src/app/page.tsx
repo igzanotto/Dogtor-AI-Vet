@@ -53,7 +53,7 @@ export default function Chat() {
               value={input}
               onChange={handleInputChange}
               className="text-black bg-rose-100 px-3 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-rose-600"
-              placeholder="Kiara es una labrador de 12 años y acaba de vomitar, que puedo hacer?"
+              placeholder="mi perrito acaba de vomitar, que tengo que hacer?"
               autoFocus
             />
             <div className="flex justify-end my-4">
