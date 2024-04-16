@@ -12,7 +12,7 @@ export default function Chat() {
   return (
     <section>
       <section className="flex justify-center items-center h-screen bg-red">
-        <div className="w-1/2">
+        <div className="w-1/4 mt-">
           <Image
             src="/dog_doctor_logos.png"
             alt="Dog Doctor"
