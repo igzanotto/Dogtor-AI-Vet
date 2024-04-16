@@ -11,7 +11,7 @@ export default function Chat() {
 
   return (
     <section>
-      <section className="flex justify-center items-center h-screen bg-red">
+      <section className="flex justify-center items-center h-screen">
         <div className="w-1/4 mt-">
           <Image
             src="/dog_doctor_logos.png"
@@ -26,22 +26,26 @@ export default function Chat() {
             Cuentame que le pasa a tu peludito asi puedo ayudarte!
           </p>
           <form onSubmit={handleSubmit} className="">
-            <div className="text-white max-h-96 h-full overflow-y-auto ">
+            <div className="max-h-96 h-full overflow-y-auto ">
               {messages.map((m) => (
                 <div
                   key={m.id}
                   className={`flex flex-col mb-2 p-2 rounded-md ${
                     m.role === "assistant"
-                      ? "self-end bg-rose-800"
-                      : "self-start bg-slate-400"
+                      ? "self-end bg-slate-100"
+                      : "self-start bg-slate-200"
                   }`}
                 >
                   <span
                     className={`text-xs ${
-                      m.role === "assistant" ? "text-right" : "text-left"
+                      m.role === "assistant" 
+                      ? "text-right font-bold" 
+                      : "text-left font-bold"
                     }`}
                   >
-                    {m.role}
+                    {m.role === "assistant"
+                      ? "dogtor"
+                      : "tú"}
                   </span>{" "}
                   {m.content}
                 </div>
