@@ -3,7 +3,7 @@ import { Configuration, OpenAIApi } from 'openai-edge'
 
 // Create an OpenAI API client (that's edge friendly!)
 const config = new Configuration({
-  apiKey:  process.env.PERPLEXITY_API_KEY || '',
+  apiKey:  process.env.OPENAI_API_KEY || '',
 })
 const openai = new OpenAIApi(config)
  
