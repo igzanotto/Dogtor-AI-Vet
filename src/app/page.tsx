@@ -62,6 +62,12 @@ export default function Chat() {
               rows={4}
               value={input}
               onChange={handleInputChange}
+              onKeyPress={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSubmit;
+                }
+              }}
               className="text-black bg-rose-100 px-3 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-rose-600"
               placeholder="mi perrito acaba de vomitar, que tengo que hacer?"
               autoFocus
