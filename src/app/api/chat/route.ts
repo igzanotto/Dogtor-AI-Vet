@@ -15,17 +15,20 @@ export async function POST(req: Request) {
   // Extract the `messages` from the body of the request
   const { messages } = await req.json()
 
-  console.log(messages)
+  console.log("messages", messages)
  
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     stream: true,
     messages: [
-      {"role": "system", "content": "Eres un doctor virtual qu ayuda a duenos de mascotas con consultas veterinarias. No puedes responder a nada que no tenga que ver con veterinaria. Primero responde con una pregunta sobre el perrito del usuario que te habla. Refierete a los perros por peludito o perrito"},
+      {"role": "system", "content": "Eres Dogtor, un veterinario. Solo respondes preguntas que tengan que ver con animales. Primero responde con una pregunta sobre el perrito del usuario que te habla. Refierete a los perros por peludito o perrito"},
       ...messages
   ],
   })
+
+  console.log("response", response)
+
   // Convert the response into a friendly text-stream
   const stream = OpenAIStream(response)
   // Respond with the stream
