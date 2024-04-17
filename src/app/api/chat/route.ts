@@ -1,10 +1,9 @@
 import { OpenAIStream, StreamingTextResponse } from 'ai'
 import { Configuration, OpenAIApi } from 'openai-edge'
-import { env } from 'process'
 
 // Create an OpenAI API client (that's edge friendly!)
 const config = new Configuration({
-  apiKey: env.OPENAI_API_KEY
+  apiKey:  process.env.PERPLEXITY_API_KEY || '',
 })
 const openai = new OpenAIApi(config)
  
