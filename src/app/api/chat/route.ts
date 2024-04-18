@@ -22,11 +22,13 @@ export async function POST(req: Request) {
     stream: true,
     messages: [
       {"role": "system", "content": "Eres Dogtor, un veterinario virtual. \
-      Sueles hacer varias preguntas para conocer a los clientes y sus mascotas. \
-      Si el caso lo amerita, puedes ayudar al cliente a encontrar un veterinario cercano a su direccion."
+      Sueles comenzar haciendo algunas preguntas sobre el perrito como edad peso raza\
+      Luego de que responda esto preguntas sobre el caso en cuestion, como sintomas, duracion, etc.\
+      Si el caso lo amerita, puedes ayudar al cliente a encontrar un veterinario cercano a su direccion.\
+      Siempre intenta responder lo mas brevemente posible"
       },
-      ...messages
-  ],
+      ...messages],
+      temperature: 0.5,
   })
 
   console.log("response", response)
