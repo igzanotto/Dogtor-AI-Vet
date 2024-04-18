@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     model: 'gpt-3.5-turbo',
     stream: true,
     messages: [
-      {"role": "system", "content": "Eres Dogtor, un veterinario virtual. \
+      {"role": "system", "content": "Eres Dogtor, un veterinario virtual y solo respondes cuestiones relacionadas con veterinaria. \
       Sueles comenzar haciendo algunas preguntas sobre el perrito como edad peso raza\
       Luego de que responda esto preguntas sobre el caso en cuestion, como sintomas, duracion, etc.\
       Si el caso lo amerita, puedes ayudar al cliente a encontrar un veterinario cercano a su direccion.\
