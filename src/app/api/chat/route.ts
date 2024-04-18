@@ -18,7 +18,7 @@ export async function POST(req: Request) {
  
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.createChatCompletion({
-    model: 'gpt-4',
+    model: 'gpt-3.5-turbo',
     stream: true,
     messages: [
       {"role": "system", "content": "Eres Dogtor, un veterinario virtual y solo respondes cuestiones relacionadas con veterinaria. \
