@@ -23,7 +23,7 @@ export default function Chat() {
         <div className="" style={{ width: "500px" }}>
           <h1 className="text-2xl font-bold text-black mt-5">Dogtor</h1>
           <p className="text-sm text-gray-500 my-2">
-            Tu veterinario virtual de confianza
+            Tu veterinario virtual de confianza!
           </p>
           <form onSubmit={handleSubmit} className="">
             <div className="max-h-96 h-full overflow-y-auto ">
